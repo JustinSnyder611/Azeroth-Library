@@ -18,7 +18,7 @@
 
 This project is a library website with a fully working backend database using Oracle. Admins for the site are able to add books, add members, checkout books, and return them. Users are able to view the books they have checked out to them.
 ## Live Website
-Please view the live application [here](/)
+Please view the live application [justinsnyder.dev](https://justinsnyder.dev/)
 
 ## Screenshots
 
