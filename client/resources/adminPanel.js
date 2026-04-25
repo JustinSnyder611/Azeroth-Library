@@ -16,8 +16,9 @@ if (!staffEmail) {
             const staffNameHeader = document.getElementById('staffNameHeader');
 
             data.forEach(staff => {
-                staffID = staff[0]
-                staffNameHeader.textContent = `${staff[2]} ${staff[1]}`
+                console.log(staff)
+                staffID = staff.staff_id
+                staffNameHeader.textContent = `${staff.staff_role} ${staff.staff_name}`
             })
         })
         .catch(error => console.error('Error fetching staff:', error));
@@ -170,19 +171,23 @@ document.getElementById('loanForm').addEventListener('submit', function(event) {
 document.getElementById('returnForm').addEventListener('submit', function(event) {
     event.preventDefault(); 
 
-    let bookID = document.getElementById('bID').value; // Book ISBN
-    let memberID = document.getElementById('mID').value; // Member ID
+    let bookID = document.getElementById('rbID').value; // Book ISBN
+    let memberID = document.getElementById('rmID').value; // Member ID
 
-    fetch('/api/memberloans', {
+    fetch('/api/returnBook', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ BookID: bookID, MemberID: memberID})
+        body: JSON.stringify({ BookID: bookID, MemberID: memberID, StaffID: staffID})
     })
     .then(response => response.json())
     .then(data => {
-        console.log(data)
+        if (data.success) {
+            alert('Book returned successfully!');
+        } else {
+            alert('Error returning book.');
+        }
     })
     .catch((error) => {
         console.error('Error:', error);

@@ -33,8 +33,8 @@ if (!memberEmail) {
 
             const memberNameHeader = document.getElementById('memberNameHeader');
             const member = data[0];
-            memberID = member[0];
-            memberNameHeader.textContent = `${member[1]}'s Account`;
+            memberID = member.member_id;
+            memberNameHeader.textContent = `${member.member_name}'s Account`;
 
 
             // Uses the memberid to return all book loans that have the memberid
@@ -47,7 +47,6 @@ if (!memberEmail) {
             return response.json();
         })
         .then(loans => {
-            console.log('Member loans:', loans);
 
             // Uses the member id to return a merged table with bookname, checked out date, and return date
             return fetch(`/api/memberloans?memberID=${encodeURIComponent(memberID)}`);
@@ -62,7 +61,6 @@ if (!memberEmail) {
             if (!Array.isArray(data) || data.length === 0) {
                 throw new Error('No member data returned');
             }
-            console.log(data)
 
             const loanContainer = document.getElementById('loanContainer');
 
@@ -71,13 +69,13 @@ if (!memberEmail) {
                 let bookLoan = document.createElement('div')
                 loanContainer.appendChild(bookLoan);
                 bookLoan.className = "loanContainer"
-                checkedDate =  new Date(data[1])
+                checkedDate =  new Date(data.issue_date)
                 formatedCheckedDate = checkedDate.toLocaleString('en-US', options)
-                returnDate =  new Date(data[2])
+                returnDate =  new Date(data.due_date)
                 formatedReturnDate = returnDate.toLocaleString('en-US', options)
 
                 let listItem1 = document.createElement('p');
-                listItem1.textContent = `${data[0]}`
+                listItem1.textContent = `${data.title}`
 
                 let listItem2 = document.createElement('p');
                 listItem2.textContent = `${formatedCheckedDate} `

@@ -23,34 +23,34 @@ fetch('/api/books')
             bookDetailContainer.className = "bookDetailContainer"
 
             let listItem1 = document.createElement('p');
-            listItem1.textContent = `Title: ${book[0]}`
+            listItem1.textContent = `Title: ${book.title}`
 
             let listItem2 = document.createElement('p');
-            listItem2.textContent = `Author: ${book[1]} `
+            listItem2.textContent = `Author: ${book.author_name} `
 
-            if (book[2] != null) {
+            if (book.publisher != null) {
                 let listItem3 = document.createElement('p');
-                listItem3.textContent = `Publisher: ${book[2]}`
+                listItem3.textContent = `Publisher: ${book.publisher}`
                 bookDetailContainer.appendChild(listItem3);
             }
 
-            if (book[3] != null) {
+            if (book.year != null) {
                 let listItem4 = document.createElement('p');
-                listItem4.textContent = `Year: ${book[3]}`
+                listItem4.textContent = `Year: ${book.year}`
                 bookDetailContainer.appendChild(listItem4);
             }
 
-            if (book[4] != null) {
+            if (book.genre != null) {
                 let listItem5 = document.createElement('p');
-                listItem5.textContent = `Genre: ${book[4]}`
+                listItem5.textContent = `Genre: ${book.genre}`
                 bookDetailContainer.appendChild(listItem5);
             }
 
             let listItem6 = document.createElement('p');
-            listItem6.textContent = `Copies Available: ${book[5]}`
+            listItem6.textContent = `Copies Available: ${book.copies_available}`
 
             let bookCover = document.createElement('img');
-            bookCover.src = book[6]
+            bookCover.src = book.cover
 
             bookCoverContainer.appendChild(bookCover);
             bookDetailContainer.appendChild(listItem1);
