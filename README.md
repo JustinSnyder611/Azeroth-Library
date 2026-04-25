@@ -32,6 +32,8 @@ git clone https://github.com/JustinSnyder611/Azeroth-Library
 ``` 
 Run 'npm install' to install dependencies
 
+Change database settings in server.js to your local oracle database.
+
 Run 'npm start' to start the backend
 
 ## License
