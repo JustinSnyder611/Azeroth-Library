@@ -67,7 +67,7 @@ if (!memberEmail) {
             // For each book loan this creates a new line with data about the loan
             data.forEach(data => {
                 console.log(data)
-                if (data.return_date = null) {
+                if (data.return_date == null) {
                     let bookLoan = document.createElement('div')
                     loanContainer.appendChild(bookLoan);
                     bookLoan.className = "loanContainer"
