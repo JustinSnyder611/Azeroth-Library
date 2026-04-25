@@ -1,0 +1,40 @@
+#catalog {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 24px;
+}
+
+.bookContainer {
+    background-color: lightslategrey;
+    display: flex;
+    align-items: flex-start;
+    width: auto;
+    height: 231px;
+    flex: 0 1 calc(20% - 24px);
+    min-width: 320px;
+    max-width: 450px;
+    box-sizing: border-box;
+}
+
+.bookCoverContainer {
+    display: flex;
+    justify-content: left;
+    width: 170px;
+    height: 100%;
+    margin-right: 10px;
+}
+
+.bookCoverContainer img {
+    width: 150px;
+    height: auto;
+    max-height: 231px;
+}
+
+.bookDetailContainer {
+    max-width: 450px;
+    text-align: left;
+    font-size: 14.4px;
+}

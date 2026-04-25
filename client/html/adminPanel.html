@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azeroth Library</title>
+    <link rel="icon" type="image/x-icon" href="../images/icon.png">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <nav>
+        <img src="../images/icon.png">
+        <ul id="navLinks">
+            <li><a id="loggedInTab" href="../html/login.html">Log in</a></li>
+            <li><a href="../html/catalog.html">Catalog</a></li>
+            <li><a href="../index.html">Home</a></li>
+        </ul>
+    </nav>
+
+    <button onclick="resetPrivilges()">Log Out</button>
+ 
+    <h1 id="staffNameHeader">Admin Panel</h1>
+    <div id="adminBoxes">
+        <div class="FormDiv">
+            <h2>Add New Book</h2>
+            <form id="bookForm">
+                <div>
+                    <label for="lname">Book ISBN:</label>
+                    <input type="text" id="bookId" name="lname"><br><br>
+                </div>
+                
+                <input class="formButton" type="submit" value="Submit">
+                <img id="loadingGif" src="../images/loading.gif">
+            </form>
+        </div>
+
+        <div class="FormDiv">
+            <h2>Add New Member</h2>
+            <form id="memberForm">
+                <div>
+                    <label for="mName">Member Name:</label>
+                    <input type="text" id="mName" name="mName"><br><br>
+                </div>
+
+                <div>
+                    <label for="mAdd">Member Address:</label>
+                    <input type="text" id="mAdd" name="mAdd"><br><br>
+                </div>
+
+                <div>
+                    <label for="mPhone">Member Phone:</label>
+                    <input type="text" id="mPhone" name="mPhone"><br><br>
+                </div>
+
+                <div>
+                    <label for="mEmail">Member Email:</label>
+                    <input type="text" id="mEmail" name="mEmail"><br><br>
+                </div>
+
+                <div>
+                    <label for="mPass">Member Password:</label>
+                    <input type="text" id="mPass" name="mPass"><br><br>
+                </div>
+
+                <input class="formButton" type="submit" value="Submit">
+            </form>
+        </div>
+
+        <div class="FormDiv">
+            <h2>Check Out a Book</h2>
+            <form id="loanForm">
+                <div>
+                    <label for="bID">Book ISBN:</label>
+                    <input type="text" id="bID" name="bID"><br><br>
+                </div>
+
+                <div>
+                    <label for="mID">Member ID:</label>
+                    <input type="text" id="mID" name="mID"><br><br>
+                </div>
+                
+                <input class="formButton" type="submit" value="Submit">
+            </form>
+        </div>
+
+        <!-- <div class="FormDiv">
+            <h2>Return a Book</h2>
+            <form id="returnForm">
+                <div>
+                    <label for="bID">Book ISBN:</label>
+                    <input type="text" id="bID" name="bID"><br><br>
+                </div>
+
+                <div>
+                    <label for="mID">Member ID:</label>
+                    <input type="text" id="mID" name="mID"><br><br>
+                </div>
+                
+                <input class="formButton" type="submit" value="Submit">
+            </form>
+        </div> -->
+    </div>
+
+    <script src="../resources/script.js"></script>
+    <script src="../resources/adminPanel.js"></script>
+</body>
+</html>

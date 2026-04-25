@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azeroth Library</title>
+    <link rel="icon" type="image/x-icon" href="../images/icon.png">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <nav>
+        <img src="../images/icon.png">
+        <ul id="navLinks">
+            <li><a id="loggedInTab" href="../html/login.html">Log in</a></li>
+            <li><a href="../html/catalog.html">Catalog</a></li>
+            <li><a href="../index.html">Home</a></li>
+        </ul>
+    </nav>
+
+    <h1>Login</h1>
+
+    <h2>Member Login</h2>
+    <form id="memberLoginForm">
+        <div>
+            <label for="mEmail">Member Email:</label>
+            <input type="text" id="mEmail" name="mEmail"><br><br>
+        </div>
+
+        <div>
+            <label for="mPass">Member Password:</label>
+            <input type="text" id="mPass" name="mPass"><br><br>
+        </div>
+
+        <input class="formButton" type="submit" value="Submit">
+    </form>
+
+        <h2>Staff Login</h2>
+    <form id="staffLoginForm">
+        <div>
+            <label for="sEmail">Staff Email:</label>
+            <input type="text" id="sEmail" name="sEmail"><br><br>
+        </div>
+
+        <div>
+            <label for="sPass">Staff Password:</label>
+            <input type="text" id="sPass" name="sPass"><br><br>
+        </div>
+
+        <input class="formButton" type="submit" value="Submit">
+    </form>
+
+
+
+
+    <script src="../resources/script.js"></script>
+    <script src="../resources/login.js"></script>
+</body>
+</html>
