@@ -1,0 +1,9 @@
+.git
+.gitignore
+.env
+.env.local
+README.md
+MIGRATION_GUIDE.md
+Database_Schema_PostgreSQL.sql
+node_modules
+npm-debug.log
