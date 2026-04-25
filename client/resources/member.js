@@ -66,26 +66,29 @@ if (!memberEmail) {
 
             // For each book loan this creates a new line with data about the loan
             data.forEach(data => {
-                let bookLoan = document.createElement('div')
-                loanContainer.appendChild(bookLoan);
-                bookLoan.className = "loanContainer"
-                checkedDate =  new Date(data.issue_date)
-                formatedCheckedDate = checkedDate.toLocaleString('en-US', options)
-                returnDate =  new Date(data.due_date)
-                formatedReturnDate = returnDate.toLocaleString('en-US', options)
+                console.log(data)
+                if (data.return_date = null) {
+                    let bookLoan = document.createElement('div')
+                    loanContainer.appendChild(bookLoan);
+                    bookLoan.className = "loanContainer"
+                    checkedDate =  new Date(data.issue_date)
+                    formatedCheckedDate = checkedDate.toLocaleString('en-US', options)
+                    returnDate =  new Date(data.due_date)
+                    formatedReturnDate = returnDate.toLocaleString('en-US', options)
 
-                let listItem1 = document.createElement('p');
-                listItem1.textContent = `${data.title}`
+                    let listItem1 = document.createElement('p');
+                    listItem1.textContent = `${data.title}`
 
-                let listItem2 = document.createElement('p');
-                listItem2.textContent = `${formatedCheckedDate} `
+                    let listItem2 = document.createElement('p');
+                    listItem2.textContent = `${formatedCheckedDate} `
 
-                let listItem3 = document.createElement('p');
-                listItem3.textContent = `${formatedReturnDate}`
+                    let listItem3 = document.createElement('p');
+                    listItem3.textContent = `${formatedReturnDate}`
 
-                bookLoan.appendChild(listItem1);
-                bookLoan.appendChild(listItem2);
-                bookLoan.appendChild(listItem3);
+                    bookLoan.appendChild(listItem1);
+                    bookLoan.appendChild(listItem2);
+                    bookLoan.appendChild(listItem3);
+                }
             })
         })
         .catch(error => console.error('Error fetching member or loans:', error));

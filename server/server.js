@@ -222,9 +222,9 @@ app.get('/api/memberloans', async (req, res) => {
         let result;
         
         if (bookID) {
-            result = await sql`SELECT b.title, l.issue_date, l.due_date FROM loans l JOIN books b ON l.book_id = b.book_id WHERE l.member_id = ${memberID} AND b.book_id = ${bookID}`;
+            result = await sql`SELECT b.title, l.issue_date, l.due_date, l.return_date FROM loans l JOIN books b ON l.book_id = b.book_id WHERE l.member_id = ${memberID} AND b.book_id = ${bookID}`;
         } else {
-            result = await sql`SELECT b.title, l.issue_date, l.due_date FROM loans l JOIN books b ON l.book_id = b.book_id WHERE l.member_id = ${memberID}`;
+            result = await sql`SELECT b.title, l.issue_date, l.due_date, l.return_date FROM loans l JOIN books b ON l.book_id = b.book_id WHERE l.member_id = ${memberID}`;
         }
 
         res.json(result);
