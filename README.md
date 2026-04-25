@@ -22,9 +22,9 @@ Please view the live application [here](/)
 
 ## Screenshots
 
-![Homepage](public\demoPicture1.PNG)
-![Catalog](public\demoPicture2.PNG)
-![Account](public\demoPicture3.PNG)
+![Homepage](public/demoPicture1.PNG)
+![Catalog](public/demoPicture2.PNG)
+![Account](public/demoPicture3.PNG)
 ## Installation
 To clone the repo:
 ```
