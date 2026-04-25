@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azeroth Library</title>
+    <link rel="icon" type="image/x-icon" href="../images/icon.png">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <nav>
+        <img src="../images/icon.png">
+        <ul id="navLinks">
+            <li><a id="loggedInTab" href="../html/login.html">Log in</a></li>
+            <li><a href="../html/catalog.html">Catalog</a></li>
+            <li><a href="../index.html">Home</a></li>
+        </ul>
+    </nav>
+
+    <button onclick="resetPrivilges()">Log Out</button>
+
+    <h1 id="memberNameHeader"></h1>
+
+    <h2>Checked Out Books</h2>
+    <div id="loanContainer">
+        <div class="loanContainer">
+            <p>Book Title</p>
+            <p>Checked Out Date</p>
+            <p>Return Date</p>
+        </div>
+    </div>
+
+    <script src="../resources/script.js"></script>
+    <script src="../resources/member.js"></script>
+</body>
+</html>
