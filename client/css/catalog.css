@@ -17,6 +17,7 @@
     min-width: 320px;
     max-width: 450px;
     box-sizing: border-box;
+    border-radius: 10px;
 }
 
 .bookCoverContainer {

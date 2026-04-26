@@ -9,7 +9,9 @@
 </head>
 <body>
     <nav>
-        <img src="../images/icon.png">
+        <div>
+            <img src="../images/icon.png">
+        </div>
         <ul id="navLinks">
             <li><a id="loggedInTab" href="../html/login.html">Log in</a></li>
             <li><a href="../html/catalog.html">Catalog</a></li>
@@ -17,7 +19,7 @@
         </ul>
     </nav>
 
-    <button onclick="resetPrivilges()">Log Out</button>
+    <button class="logoutButton" onclick="resetPrivilges()">Log Out</button>
  
     <h1 id="staffNameHeader">Admin Panel</h1>
     <div id="adminBoxes">
