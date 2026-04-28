@@ -24,15 +24,11 @@ fetch('/api/books')
 
             let listItem1 = document.createElement('p');
             listItem1.textContent = `Title: ${book.title}`
+            bookDetailContainer.appendChild(listItem1);
 
             let listItem2 = document.createElement('p');
             listItem2.textContent = `Author: ${book.author_name} `
-
-            if (book.publisher != null) {
-                let listItem3 = document.createElement('p');
-                listItem3.textContent = `Publisher: ${book.publisher}`
-                bookDetailContainer.appendChild(listItem3);
-            }
+            bookDetailContainer.appendChild(listItem2);
 
             if (book.year != null) {
                 let listItem4 = document.createElement('p');
@@ -46,6 +42,12 @@ fetch('/api/books')
                 bookDetailContainer.appendChild(listItem5);
             }
 
+            if (book.publisher != null) {
+                let listItem3 = document.createElement('p');
+                listItem3.textContent = `Publisher: ${book.publisher}`
+                bookDetailContainer.appendChild(listItem3);
+            }
+
             let listItem6 = document.createElement('p');
             listItem6.textContent = `Copies Available: ${book.copies_available}`
 
@@ -53,8 +55,8 @@ fetch('/api/books')
             bookCover.src = book.cover
 
             bookCoverContainer.appendChild(bookCover);
-            bookDetailContainer.appendChild(listItem1);
-            bookDetailContainer.appendChild(listItem2);
+            
+            
             bookDetailContainer.appendChild(listItem6);
 
             
