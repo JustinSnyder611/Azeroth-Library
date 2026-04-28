@@ -134,7 +134,7 @@ form div input {
     margin-top: 8px;
 }
 
-/* Moblie compatibility sizing */
+/* Moblie Compatibility Sizing */
 @media screen and (max-width: 600px) {
     h1 {
         width: 100%;

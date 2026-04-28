@@ -1,3 +1,4 @@
+/* Book Catalog Styles */
 #catalog {
     font-family: Arial, sans-serif;
     margin: 20px;
@@ -14,7 +15,7 @@
     width: auto;
     height: 231px;
     flex: 0 1 calc(20% - 24px);
-    min-width: 320px;
+    min-width: 360px;
     max-width: 450px;
     box-sizing: border-box;
     border-radius: 10px;
