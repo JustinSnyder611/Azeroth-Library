@@ -26,6 +26,29 @@ async function initialize() {
         console.error('Error connecting to PostgreSQL database:', err);
     }
 }
+app.get('/server', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/html/server.html'));
+});
+
+app.get('/adminPanel', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/html/adminPanel.html'));
+});
+
+app.get('/catalog', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/html/catalog.html'));
+});
+
+app.get('/login', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/html/login.html'));
+});
+
+app.get('/member', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/html/member.html'));
+});
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/index.html'));
+});
 
 // Gets all of the books in the books table
 app.get('/api/books', async (req, res) => {
