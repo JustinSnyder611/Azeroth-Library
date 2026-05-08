@@ -12,8 +12,8 @@
       "dest": "server/server.js"
     },
     {
-      "src": "/(?!api)",
-      "dest": "client/index.html"
+      "src": "/(.*)",
+      "dest": "server/server.js"
     }
   ],
   "env": {
