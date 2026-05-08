@@ -12,11 +12,11 @@
   ],
     "redirects": [
     { "source": "/server", "destination": "http://192.168.1.141" },
-    { "source": "/adminPanel", "destination": "../client/html/adminPanel.html" },
-    { "source": "/catalog", "destination": "../client/html/catalog.html" },
-    { "source": "/login", "destination": "../client/html/login.html" },
-    { "source": "/member", "destination": "../client/html/member.html" },
-    { "source": "/", "destination": "../client/index.html" }
+    { "source": "/adminPanel", "destination": "/client/html/adminPanel.html" },
+    { "source": "/catalog", "destination": "/client/html/catalog.html" },
+    { "source": "/login", "destination": "/client/html/login.html" },
+    { "source": "/member", "destination": "/client/html/member.html" },
+    { "source": "/", "destination": "/client/index.html" }
   ],
   "routes": [
     {
