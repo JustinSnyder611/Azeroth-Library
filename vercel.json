@@ -14,10 +14,6 @@
     {
       "src": "/(?!api)",
       "dest": "client/index.html"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "client/$1"
     }
   ],
   "env": {
