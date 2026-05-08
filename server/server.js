@@ -27,7 +27,7 @@ async function initialize() {
     }
 }
 app.get('/server', (req, res) => {
-  res.sendFile(path.join(__dirname, '../client/html/server.html'));
+  res.redirect('http://192.168.1.141');
 });
 
 app.get('/adminPanel', (req, res) => {
